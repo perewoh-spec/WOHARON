@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import WoharonApp from "@/WoharonApp";
+import WoharonApp from "@/app";
 
 export const Route = createFileRoute("/")({
   head: () => ({
