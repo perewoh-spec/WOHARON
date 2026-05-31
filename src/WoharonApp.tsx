@@ -38,11 +38,15 @@ const TEAM = [
     name: "Pere D. Woh",
     role: "Founder / Full Stack Developer",
     image: perePortrait,
+    bio: "Ships production-grade web platforms end-to-end — from database schema to the last pixel.",
+    skills: ["React", "TypeScript", "Node", "Cloud"],
   },
   {
     name: "Mahdi Salau",
     role: "Co-Founder / UX Engineer",
     image: cofounderPortrait,
+    bio: "Turns messy ideas into calm, considered interfaces people actually enjoy using.",
+    skills: ["UX", "UI Systems", "Prototyping", "Brand"],
   },
 ];
 
