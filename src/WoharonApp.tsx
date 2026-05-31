@@ -26,7 +26,25 @@ import {
   Rocket,
 } from "lucide-react";
 import perePortrait from "@/assets/founder.jpg";
+import cofounderPortrait from "@/assets/cofounder.jpg";
 import woharonMark from "@/assets/woharon-mark.png";
+
+// Web3Forms access key — sign up free at https://web3forms.com with info.woharon@gmail.com
+// and paste the access key below. Submissions land in that inbox automatically.
+const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+
+const TEAM = [
+  {
+    name: "Pere D. Woh",
+    role: "Founder / Full Stack Developer",
+    image: perePortrait,
+  },
+  {
+    name: "Co-Founder Name",
+    role: "Co-Founder / UX Engineer",
+    image: cofounderPortrait,
+  },
+];
 
 const WHATSAPP = "2349163493585";
 
