@@ -18,6 +18,18 @@ export default defineConfig({
     server: { entry: "server" },
   },
   // Force-enable nitro outside the Lovable sandbox (e.g. on Netlify) so the deploy
-  // plugin actually runs. Inside the sandbox it auto-enables.
-  nitro: preset ? { preset } : undefined,
+  // plugin actually runs. For the netlify preset, route the SSR function output
+  // to .netlify/functions-internal/server so Netlify auto-discovers it.
+  nitro: preset
+    ? preset === "netlify"
+      ? {
+          preset,
+          output: {
+            dir: ".netlify",
+            serverDir: ".netlify/functions-internal/server",
+            publicDir: "dist/client",
+          },
+        }
+      : { preset }
+    : undefined,
 });
