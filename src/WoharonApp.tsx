@@ -40,7 +40,7 @@ const TEAM = [
     image: perePortrait,
   },
   {
-    name: "Co-Founder Name",
+    name: "Mahdi Salau",
     role: "Co-Founder / UX Engineer",
     image: cofounderPortrait,
   },
