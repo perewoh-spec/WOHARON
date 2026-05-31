@@ -329,7 +329,7 @@ function KineticVisual() {
             className="flex items-center justify-between gap-3 text-[10px] font-mono uppercase tracking-widest"
           >
             <span className="text-primary">{row.k}</span>
-            <span className="flex-1 border-b border-dashed border-background/20" />
+            <span className="flex-1" />
             <span className="opacity-70">{row.v}</span>
           </div>
         ))}
@@ -460,7 +460,7 @@ function ServicesDetail() {
           </h2>
         </div>
 
-        <div className="rounded-[2.5rem] border border-border bg-card overflow-hidden divide-y divide-border">
+        <div className="rounded-[2.5rem] border border-border bg-card overflow-hidden">
           {SERVICE_DETAIL.map((s, idx) => (
             <Reveal key={s.t} delay={idx * 40}>
               <div className="group relative grid grid-cols-12 gap-4 md:gap-8 px-5 md:px-10 py-7 md:py-9 transition-colors hover:bg-primary/30">
