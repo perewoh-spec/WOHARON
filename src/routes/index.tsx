@@ -1,29 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
+import WoharonApp from "@/WoharonApp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Woharon — Digital Agency" },
+      {
+        name: "description",
+        content:
+          "Woharon Digital Agency builds websites, brands, automation and AI systems for ambitious businesses.",
+      },
+      { property: "og:title", content: "Woharon — Digital Agency" },
+      {
+        property: "og:description",
+        content:
+          "Websites, branding, automation and AI systems. One team, one invoice, zero handoffs.",
+      },
+      { property: "og:type", content: "website" },
     ],
   }),
-  component: Index,
+  component: WoharonApp,
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
