@@ -1,14 +1,9 @@
 [build]
   command = "bun run build"
-  publish = "dist"
+  # Nitro's netlify preset writes static assets to dist/client and the SSR
+  # function to .netlify/functions-internal/server.
+  publish = "dist/client"
 
 [build.environment]
-  # Tell Nitro (used by TanStack Start) to output a Netlify-compatible build
   NITRO_PRESET = "netlify"
   NODE_VERSION = "20"
-
-# SPA fallback: any unmatched route is served by the SSR function
-[[redirects]]
-  from = "/*"
-  to   = "/.netlify/functions/server"
-  status = 200
