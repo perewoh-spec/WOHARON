@@ -523,11 +523,7 @@ function Why() {
                       : "bg-accent/40 border-accent/50 hover:border-foreground/30"
               }`}
             >
-              <div className="flex items-baseline justify-between mb-3">
-                <span
-                  className={`h-px flex-1 ${d.n === "02" ? "bg-background/20" : "bg-foreground/15"}`}
-                />
-              </div>
+              <div className="mb-3" />
               <h3 className="font-display text-2xl lg:text-3xl font-medium tracking-tight">
                 {d.t}
               </h3>
