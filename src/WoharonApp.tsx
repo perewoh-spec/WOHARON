@@ -546,23 +546,21 @@ function Why() {
 
 function Team() {
   return (
-    <section id="team" className="py-10 lg:py-14 px-4 md:px-8">
-      <div className="mx-auto max-w-6xl">
-        <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
-          <div>
-            <Chip className="mb-4">Meet the team</Chip>
-            <h2 className="font-display text-4xl lg:text-6xl font-medium tracking-tight text-balance max-w-2xl">
-              The minds <span className="italic font-light">building it.</span>
-            </h2>
-          </div>
+    <section id="team" className="py-8 lg:py-12 px-4 md:px-8">
+      <div className="mx-auto max-w-5xl">
+        <div className="mb-6">
+          <Chip className="mb-3">Meet the team</Chip>
+          <h2 className="font-display text-3xl lg:text-5xl font-medium tracking-tight text-balance max-w-2xl">
+            The minds <span className="italic font-light">building it.</span>
+          </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {TEAM.map((m) => (
             <Reveal
               key={m.name}
-              className="group bg-card border border-border rounded-[2rem] p-3 overflow-hidden"
+              className="group bg-card border border-border rounded-[1.75rem] p-3 overflow-hidden"
             >
-              <div className="relative rounded-[1.5rem] overflow-hidden aspect-square bg-muted">
+              <div className="relative rounded-[1.25rem] overflow-hidden aspect-square bg-muted">
                 <img
                   src={m.image}
                   alt={`Portrait of ${m.name}, ${m.role} at Woharon`}
@@ -570,10 +568,8 @@ function Team() {
                   loading="lazy"
                 />
               </div>
-              <div className="px-2 pt-4 pb-1">
-                <div className="font-display text-xl lg:text-2xl tracking-tight">
-                  {m.name}
-                </div>
+              <div className="px-1 pt-3 pb-1">
+                <div className="font-display text-xl tracking-tight">{m.name}</div>
                 <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-1">
                   {m.role}
                 </div>
