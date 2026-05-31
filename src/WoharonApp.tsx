@@ -38,11 +38,15 @@ const TEAM = [
     name: "Pere D. Woh",
     role: "Founder / Full Stack Developer",
     image: perePortrait,
+    bio: "Ships production-grade web platforms end-to-end — from database schema to the last pixel.",
+    skills: ["React", "TypeScript", "Node", "Cloud"],
   },
   {
     name: "Mahdi Salau",
     role: "Co-Founder / UX Engineer",
     image: cofounderPortrait,
+    bio: "Turns messy ideas into calm, considered interfaces people actually enjoy using.",
+    skills: ["UX", "UI Systems", "Prototyping", "Brand"],
   },
 ];
 
@@ -546,36 +550,79 @@ function Why() {
 
 function Team() {
   return (
-    <section id="team" className="py-8 lg:py-12 px-4 md:px-8">
-      <div className="mx-auto max-w-5xl">
-        <div className="mb-6">
-          <Chip className="mb-3">Meet the team</Chip>
-          <h2 className="font-display text-3xl lg:text-5xl font-medium tracking-tight text-balance max-w-2xl">
-            The minds <span className="italic font-light">building it.</span>
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {TEAM.map((m) => (
-            <Reveal
-              key={m.name}
-              className="group bg-card border border-border rounded-[1.75rem] p-3 overflow-hidden"
-            >
-              <div className="relative rounded-[1.25rem] overflow-hidden aspect-square bg-muted">
-                <img
-                  src={m.image}
-                  alt={`Portrait of ${m.name}, ${m.role} at Woharon`}
-                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
+    <section id="team" className="py-12 lg:py-20 px-4 md:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+          {/* Intro panel */}
+          <Reveal className="lg:col-span-4 bg-foreground text-background rounded-[2rem] p-6 lg:p-8 flex flex-col justify-between min-h-[320px] lg:min-h-full relative overflow-hidden">
+            <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-primary/20 blur-3xl" />
+            <div className="relative">
+              <Chip className="bg-background/10 text-background border-background/20 mb-4">
+                Meet the team
+              </Chip>
+              <h2 className="font-display text-3xl lg:text-4xl font-medium tracking-tight text-balance">
+                The minds <span className="italic font-light">building it.</span>
+              </h2>
+              <p className="text-sm text-background/70 mt-4 max-w-xs">
+                A tight two-person studio. No middlemen, no handoffs — you talk directly to the
+                people writing the code and drawing the pixels.
+              </p>
+            </div>
+            <div className="relative mt-6 flex items-center gap-3">
+              <div className="flex -space-x-2">
+                {TEAM.map((m) => (
+                  <img
+                    key={m.name}
+                    src={m.image}
+                    alt=""
+                    className="w-9 h-9 rounded-full object-cover object-top border-2 border-foreground"
+                  />
+                ))}
               </div>
-              <div className="px-1 pt-3 pb-1">
-                <div className="font-display text-xl tracking-tight">{m.name}</div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-1">
-                  {m.role}
+              <div className="text-[10px] font-bold uppercase tracking-widest text-background/60">
+                {TEAM.length} humans · Lagos, NG
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Team cards */}
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {TEAM.map((m, i) => (
+              <Reveal
+                key={m.name}
+                className="group bg-card border border-border rounded-[2rem] p-4 flex flex-col"
+              >
+                <div className="relative rounded-[1.5rem] overflow-hidden aspect-[4/5] bg-muted">
+                  <img
+                    src={m.image}
+                    alt={`Portrait of ${m.name}, ${m.role} at Woharon`}
+                    className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 left-3 font-mono text-[10px] bg-background/90 backdrop-blur px-2 py-1 rounded-full">
+                    0{i + 1} / 0{TEAM.length}
+                  </div>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+                <div className="px-1 pt-4 pb-1 flex-1 flex flex-col">
+                  <div className="font-display text-2xl tracking-tight">{m.name}</div>
+                  <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-1">
+                    {m.role}
+                  </div>
+                  <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{m.bio}</p>
+                  <div className="flex flex-wrap gap-1.5 mt-4">
+                    {m.skills.map((s) => (
+                      <span
+                        key={s}
+                        className="text-[10px] font-mono px-2 py-1 rounded-full bg-muted text-foreground/70"
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>
