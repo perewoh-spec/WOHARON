@@ -1,0 +1,14 @@
+[build]
+  command = "bun run build"
+  publish = "dist"
+
+[build.environment]
+  # Tell Nitro (used by TanStack Start) to output a Netlify-compatible build
+  NITRO_PRESET = "netlify"
+  NODE_VERSION = "20"
+
+# SPA fallback: any unmatched route is served by the SSR function
+[[redirects]]
+  from = "/*"
+  to   = "/.netlify/functions/server"
+  status = 200
