@@ -544,6 +544,53 @@ function Why() {
   );
 }
 
+function Team() {
+  return (
+    <section id="team" className="py-10 lg:py-14 px-4 md:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
+          <div>
+            <Chip className="mb-4">Meet the team</Chip>
+            <h2 className="font-display text-4xl lg:text-6xl font-medium tracking-tight text-balance max-w-2xl">
+              The people behind <span className="italic font-light">Woharon</span>.
+            </h2>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {TEAM.map((m) => (
+            <Reveal
+              key={m.name}
+              className="group bg-card border border-border rounded-[2.5rem] p-4 overflow-hidden"
+            >
+              <div className="relative rounded-[2rem] overflow-hidden aspect-[4/5] bg-muted">
+                <img
+                  src={m.image}
+                  alt={`Portrait of ${m.name}, ${m.role} at Woharon`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="px-3 pt-5 pb-2 flex items-end justify-between gap-4">
+                <div>
+                  <div className="font-display text-2xl lg:text-3xl tracking-tight">
+                    {m.name}
+                  </div>
+                  <div className="text-xs font-bold uppercase tracking-widest text-muted-foreground mt-1">
+                    {m.role}
+                  </div>
+                </div>
+                <span className="bg-primary text-primary-foreground text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-widest">
+                  Woharon
+                </span>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function About() {
   return (
     <section id="about" className="py-10 lg:py-14 px-4 md:px-8">
