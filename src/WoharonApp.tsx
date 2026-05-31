@@ -31,7 +31,7 @@ import woharonMark from "@/assets/woharon-mark.png";
 
 // Web3Forms access key — sign up free at https://web3forms.com with info.woharon@gmail.com
 // and paste the access key below. Submissions land in that inbox automatically.
-const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+const WEB3FORMS_ACCESS_KEY = "ba3ebb01-2cc7-4363-99a5-4f9d19a1915d";
 
 const TEAM = [
   {
