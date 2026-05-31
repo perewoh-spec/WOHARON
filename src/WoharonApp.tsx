@@ -640,6 +640,37 @@ function About() {
 
 function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [service, setService] = useState("");
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError(null);
+    setSending(true);
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.append("subject", "New Woharon booking inquiry");
+    formData.append("from_name", "Woharon Website");
+    formData.append("service", service);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError(data.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Network error. Please check your connection and try again.");
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-10 lg:py-14 px-4 md:px-8">
       <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-12 gap-4">
@@ -700,28 +731,27 @@ function ContactForm() {
             </div>
           ) : (
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSubmitted(true);
-              }}
+              onSubmit={onSubmit}
               className="bg-card border border-border rounded-[2.5rem] p-8 lg:p-12 space-y-6"
             >
+              {/* Honeypot anti-spam */}
+              <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} />
               <div className="grid md:grid-cols-2 gap-6">
                 <Field label="Your name">
-                  <Input required placeholder="Adaeze Okafor" />
+                  <Input name="name" required placeholder="Adaeze Okafor" />
                 </Field>
                 <Field label="Business name">
-                  <Input placeholder="Acme Logistics Ltd" />
+                  <Input name="business" placeholder="Acme Logistics Ltd" />
                 </Field>
                 <Field label="Phone">
-                  <Input type="tel" placeholder="+234 ..." />
+                  <Input name="phone" type="tel" placeholder="+234 ..." />
                 </Field>
                 <Field label="Email">
-                  <Input type="email" required placeholder="you@business.com" />
+                  <Input name="email" type="email" required placeholder="you@business.com" />
                 </Field>
               </div>
               <Field label="Service of interest">
-                <Select>
+                <Select value={service} onValueChange={setService}>
                   <SelectTrigger>
                     <SelectValue placeholder="Choose a service" />
                   </SelectTrigger>
@@ -736,14 +766,25 @@ function ContactForm() {
                 </Select>
               </Field>
               <Field label="Tell us about your project">
-                <Textarea rows={5} placeholder="What are you trying to build, fix, or grow?" />
+                <Textarea
+                  name="message"
+                  rows={5}
+                  placeholder="What are you trying to build, fix, or grow?"
+                />
               </Field>
+              {error && (
+                <p className="text-sm text-destructive font-medium" role="alert">
+                  {error}
+                </p>
+              )}
               <Button
                 type="submit"
                 size="lg"
-                className="rounded-2xl bg-primary text-primary-foreground hover:bg-accent h-12 px-7 w-full md:w-auto font-bold"
+                disabled={sending}
+                className="rounded-2xl bg-primary text-primary-foreground hover:bg-accent h-12 px-7 w-full md:w-auto font-bold disabled:opacity-60"
               >
-                Send inquiry <ArrowRight className="ml-2 size-4" />
+                {sending ? "Sending..." : "Send inquiry"}{" "}
+                <ArrowRight className="ml-2 size-4" />
               </Button>
             </form>
           )}
