@@ -6,8 +6,8 @@ export function Why() {
     <section className="py-10 lg:py-14 px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl mb-6">
-          <Chip className="mb-6">Why Woharon</Chip>
-          <h2 className="font-display font-medium text-4xl lg:text-6xl leading-[0.95] tracking-tighter text-balance">
+          <Chip className="mb-6">Why Woharon?</Chip>
+          <h2 className="font-display font-medium text-5xl lg:text-7xl leading-[0.95] tracking-tighter text-balance">
             Not another freelancer. Not another templated agency.
           </h2>
         </div>
