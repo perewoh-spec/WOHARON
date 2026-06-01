@@ -92,9 +92,11 @@ export function Hero() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/30 blur-[100px] rounded-full -mr-20 -mt-20" />
           <div className="relative z-10">
             <div className="flex flex-wrap items-center gap-2 mb-8">
-              <Chip>Woharon Digital Agency</Chip>
+              <span className="inline-flex items-center px-4 py-1.5 bg-muted text-sm md:text-base font-extrabold uppercase tracking-[0.25em] rounded-full border border-border">
+                Woharon
+              </span>
             </div>
-            <h1 className="font-display font-medium text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tighter mb-8 text-balance">
+            <h1 className="font-display font-medium text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tighter mb-8 text-balance">
               We build the <span className="italic font-light text-accent">digital</span>{" "}
               infrastructure{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground">

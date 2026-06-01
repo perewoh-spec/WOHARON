@@ -5,9 +5,9 @@ export function ServicesDetail() {
   return (
     <section id="services" className="py-10 lg:py-14 px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-6 max-w-2xl">
+        <div className="mb-6 max-w-3xl">
           <Chip className="mb-6">What we build</Chip>
-          <h2 className="font-display font-medium text-4xl lg:text-6xl leading-[0.95] tracking-tighter text-balance">
+          <h2 className="font-display font-medium text-5xl lg:text-7xl leading-[0.95] tracking-tighter text-balance">
             From strategy to execution, under one team.
           </h2>
         </div>
@@ -26,7 +26,7 @@ export function ServicesDetail() {
                   </h3>
                 </div>
                 <div className="col-span-12 md:col-span-4">
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{s.d}</p>
+                  <p className="text-sm md:text-base text-foreground leading-relaxed font-bold">{s.d}</p>
                 </div>
                 <div className="col-span-12 md:col-span-3">
                   <ul className="flex flex-wrap gap-1.5">

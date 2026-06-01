@@ -31,7 +31,7 @@ export function About() {
               "I started Woharon because too many businesses lose customers simply because their
               digital presence doesn't reflect the quality of what they actually do, and they
               overspend on tools and vendors trying to fix it. We exist to{" "}
-              <span className="italic font-light text-accent">close that gap</span>, saving you
+              <span className="italic font-bold text-accent">close that gap</span>, saving you
               time, cutting cost, and creating real value with systems that genuinely work."
             </p>
           </div>
