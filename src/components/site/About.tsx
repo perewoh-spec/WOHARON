@@ -26,7 +26,9 @@ export function About() {
         </div>
         <div className="md:col-span-7 bg-card border border-border rounded-[2.5rem] p-8 md:p-12 flex flex-col justify-between">
           <div>
-            <Chip className="mb-6">Founder note</Chip>
+            <h2 className="font-display text-5xl lg:text-7xl font-medium tracking-tighter text-balance mb-6">
+              Founder's note
+            </h2>
             <p className="font-display text-2xl lg:text-4xl leading-[1.15] tracking-tight text-balance font-medium">
               "I started Woharon because too many businesses lose customers simply because their
               digital presence doesn't reflect the quality of what they actually do, and they
