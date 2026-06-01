@@ -97,10 +97,7 @@ export function Hero() {
             </div>
             <h1 className="font-sans font-semibold text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tighter mb-8 text-balance">
               We build the <span className="italic font-light text-accent">digital</span>{" "}
-              infrastructure{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground">
-                your business needs to grow.
-              </span>
+              infrastructure your business needs to grow.
             </h1>
             <p className="max-w-md text-lg text-muted-foreground leading-relaxed mb-10">
               From websites and automation to branding and AI systems, Woharon Digital Agency helps
