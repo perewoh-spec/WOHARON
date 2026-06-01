@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Sparkles, Layers, Rocket } from "lucide-react";
 import woharonMark from "@/assets/woharon-mark.png";
-import woharonMark from "@/assets/woharon-mark.png";
 
 const ROTATING_WORDS = ["websites.", "brands.", "automations.", "systems.", "stores."];
 
