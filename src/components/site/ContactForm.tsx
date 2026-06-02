@@ -112,16 +112,16 @@ export function ContactForm() {
               <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} />
               <div className="grid md:grid-cols-2 gap-6">
                 <Field label="Your name">
-                  <Input name="name" required placeholder="Adaeze Okafor" />
+                  <Input name="name" required />
                 </Field>
                 <Field label="Business name">
-                  <Input name="business" placeholder="Acme Logistics Ltd" />
+                  <Input name="business" />
                 </Field>
                 <Field label="Phone">
-                  <Input name="phone" type="tel" placeholder="+234 ..." />
+                  <Input name="phone" type="tel" />
                 </Field>
                 <Field label="Email">
-                  <Input name="email" type="email" required placeholder="you@business.com" />
+                  <Input name="email" type="email" required />
                 </Field>
               </div>
               <Field label="Service of interest">

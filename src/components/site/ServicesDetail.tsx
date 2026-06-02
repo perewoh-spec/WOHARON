@@ -5,9 +5,9 @@ export function ServicesDetail() {
   return (
     <section id="services" className="py-10 lg:py-14 px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-6 max-w-3xl">
+        <div className="mb-6">
           <Chip className="mb-6">What we build</Chip>
-          <h2 className="font-display font-medium text-5xl lg:text-7xl leading-[0.95] tracking-tighter text-balance">
+          <h2 className="font-display font-medium text-3xl md:text-5xl lg:text-6xl leading-[0.95] tracking-tighter whitespace-nowrap">
             From strategy to execution, under one team.
           </h2>
         </div>
@@ -33,7 +33,7 @@ export function ServicesDetail() {
                     {s.items.map((i) => (
                       <li
                         key={i}
-                        className="text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded-full bg-background border border-border text-foreground/70 group-hover:border-foreground/30 transition-colors"
+                        className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-accent/30 border border-accent text-foreground transition-colors"
                       >
                         {i}
                       </li>
