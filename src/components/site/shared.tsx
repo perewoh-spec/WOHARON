@@ -1,10 +1,16 @@
 import { useEffect, useRef } from "react";
 import { Label } from "@/components/ui/label";
 
-export function Chip({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+export function Chip({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
     <span
-      className={`inline-flex items-center gap-1.5 px-3 py-1 bg-muted text-[10px] font-bold uppercase tracking-widest rounded-full border border-border ${className}`}
+      className={`inline-flex items-center gap-1.5 px-3 py-1 bg-muted text-[16px] font-bold uppercase tracking-widest rounded-full border border-border ${className}`}
     >
       {children}
     </span>
@@ -18,7 +24,9 @@ export function LiveChip({ label }: { label: string }) {
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
         <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
       </span>
-      <span className="text-[10px] font-bold uppercase tracking-tight text-foreground">{label}</span>
+      <span className="text-[10px] font-bold uppercase tracking-tight text-foreground">
+        {label}
+      </span>
     </span>
   );
 }

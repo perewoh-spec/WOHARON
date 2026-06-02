@@ -12,40 +12,46 @@ type FounderNoteProps = {
 
 function FounderNote({ image, alt, name, role, heading, quote }: FounderNoteProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-      <div className="md:col-span-5 bg-foreground text-background rounded-[2.5rem] p-4 overflow-hidden relative min-h-[420px]">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
+      {/* Left Column: Image Container (Vertical footprint significantly reduced) */}
+      <div className="md:col-span-4 bg-foreground text-background rounded-[1.5rem] p-3 overflow-hidden relative min-h-[300px] md:h-[340px]">
         <img
           src={image}
           alt={alt}
-          className="w-full h-full object-cover rounded-[2rem]"
+          className="w-full h-full object-cover rounded-[1.2rem]"
           loading="lazy"
         />
-        <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between bg-background/95 backdrop-blur-md text-foreground px-5 py-3 rounded-2xl border border-border">
+        {/* Floating Tag */}
+        <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-background/95 backdrop-blur-md text-foreground px-4 py-2 rounded-xl border border-border">
           <div>
-            <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+            <div className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground">
               {role}
             </div>
-            <div className="font-display text-lg leading-tight">{name}</div>
+            <div className="font-display text-base leading-tight">{name}</div>
           </div>
-          <span className="bg-primary text-primary-foreground text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-widest">
+          <span className="bg-primary text-primary-foreground text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest">
             Est. 2026
           </span>
         </div>
       </div>
-      <div className="md:col-span-7 bg-card border border-border rounded-[2.5rem] p-8 md:p-12 flex flex-col justify-between">
+
+      {/* Right Column: Content Box */}
+      <div className="md:col-span-8 bg-card border border-border rounded-[1.5rem] p-6 md:p-8 flex flex-col justify-between">
         <div>
-          <h2 className="font-display text-4xl lg:text-5xl font-medium tracking-tighter text-balance mb-6">
+          <h2 className="font-display text-2xl lg:text-3xl font-medium tracking-tighter text-balance mb-3">
             {heading}
           </h2>
-          <p className="font-display text-2xl lg:text-4xl leading-[1.15] tracking-tight text-balance font-medium">
+          <p className="font-display text-lg lg:text-xl leading-snug tracking-tight text-balance font-medium text-muted-foreground">
             {quote}
           </p>
         </div>
-        <div className="mt-8 flex items-center gap-4">
+
+        {/* Divider and Signature */}
+        <div className="mt-4 flex items-center gap-4">
           <div className="h-px flex-1 bg-border" />
           <div className="text-right">
-            <div className="font-display text-lg">{name}</div>
-            <div className="text-xs text-muted-foreground">{role}</div>
+            <div className="font-display text-base">{name}</div>
+            <div className="text-[11px] text-muted-foreground">{role}</div>
           </div>
         </div>
       </div>
@@ -55,8 +61,8 @@ function FounderNote({ image, alt, name, role, heading, quote }: FounderNoteProp
 
 export function About() {
   return (
-    <section id="about" className="py-6 lg:py-10 px-4 md:px-8">
-      <div className="mx-auto max-w-7xl space-y-4">
+    <section id="about" className="py-4 lg:py-6 px-4 md:px-8">
+      <div className="mx-auto max-w-6xl space-y-3">
         <FounderNote
           image={perePortrait}
           alt="Portrait of Pere D. Woh, Founder of Woharon Digital Agency"
