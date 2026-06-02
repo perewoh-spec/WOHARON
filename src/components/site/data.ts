@@ -14,8 +14,8 @@ export const NAV = [
 ];
 
 export const TEAM = [
-  { name: "Pere D. Woh", role: "Founder / Full Stack Developer", image: perePortrait },
-  { name: "Mahdi Salau", role: "Co-Founder / UX Engineer", image: cofounderPortrait },
+  { name: "Pere D. Woh", role: "Full Stack Developer", image: perePortrait },
+  { name: "Mahdi Salau", role: "UX Engineer", image: cofounderPortrait },
 ];
 
 export const SERVICES = [
