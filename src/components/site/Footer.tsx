@@ -60,6 +60,16 @@ export function Footer() {
                   +234 708 743 1074
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/woharonservices"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  @woharonservices
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -73,6 +83,14 @@ export function Footer() {
               className="hover:text-primary"
             >
               WhatsApp
+            </a>
+            <a
+              href="https://www.instagram.com/woharonservices"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary"
+            >
+              Instagram
             </a>
           </div>
         </div>
