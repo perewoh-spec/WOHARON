@@ -7,7 +7,7 @@ export function Team() {
       <div className="mx-auto max-w-5xl">
         <div className="mb-8">
           <h2 className="font-display text-5xl lg:text-7xl font-medium tracking-tighter text-balance">
-            Meet the <span className="inline-block bg-accent text-accent-foreground rounded-full px-6 pb-2">team</span>
+            <span className="inline-block bg-accent text-accent-foreground rounded-full px-8 pb-3 pt-1">Meet our Team</span>
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
