@@ -3,7 +3,7 @@ import { SERVICE_DETAIL } from "./data";
 
 export function ServicesDetail() {
   return (
-    <section id="services" className="py-10 lg:py-14 px-4 md:px-8">
+    <section id="services" className="py-6 lg:py-10 px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6">
           <Chip className="mb-6">What we build</Chip>
@@ -15,14 +15,22 @@ export function ServicesDetail() {
         <div className="rounded-[2.5rem] border border-border bg-card overflow-hidden divide-y divide-border">
           {SERVICE_DETAIL.map((s, idx) => (
             <Reveal key={s.t} delay={idx * 40}>
-              <div className="group relative grid grid-cols-12 gap-4 md:gap-8 px-5 md:px-10 py-7 md:py-9 transition-colors hover:bg-primary/30">
+              <div className="group relative grid grid-cols-12 gap-4 md:gap-8 px-5 md:px-10 py-4 md:py-5 transition-colors hover:bg-primary/30">
                 <span
                   className="pointer-events-none absolute left-0 top-0 bottom-0 w-1 bg-accent origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500"
                   aria-hidden
                 />
                 <div className="col-span-12 md:col-span-5">
                   <h3 className="font-display text-2xl md:text-4xl font-medium leading-[0.95] tracking-tight">
-                    <span className="inline-block bg-accent text-accent-foreground rounded-full px-5 pb-2 pt-1">{s.t}</span>
+                    <span
+                      className="inline-flex items-center rounded-full px-6 py-2.5 font-semibold tracking-tight text-accent-foreground border border-accent/60 shadow-[0_4px_20px_-6px_hsl(140_40%_55%/0.35),inset_0_1px_0_hsl(0_0%_100%/0.7)] backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_8px_28px_-6px_hsl(140_45%_55%/0.5),inset_0_1px_0_hsl(0_0%_100%/0.8)] group-hover:-translate-y-0.5"
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(135deg, hsl(120 45% 88% / 0.95), hsl(140 40% 78% / 0.95))",
+                      }}
+                    >
+                      {s.t}
+                    </span>
                   </h3>
                 </div>
                 <div className="col-span-12 md:col-span-4">

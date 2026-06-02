@@ -3,7 +3,7 @@ import { DIFFERENTIATORS } from "./data";
 
 export function Why() {
   return (
-    <section className="py-10 lg:py-14 px-4 md:px-8">
+    <section className="py-6 lg:py-8 px-4 md:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6">
           <Chip className="mb-6">Why Woharon?</Chip>
