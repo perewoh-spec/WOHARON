@@ -7,7 +7,7 @@ export function Why() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-6">
           <Chip className="mb-6">Why Woharon?</Chip>
-          <h2 className="font-display font-medium text-2xl md:text-4xl lg:text-5xl leading-[0.95] tracking-tighter whitespace-nowrap">
+          <h2 className="font-display font-medium text-2xl md:text-4xl lg:text-5xl leading-[0.95] tracking-tighter">
             Not another freelancer. Not another templated agency.
           </h2>
         </div>
@@ -25,7 +25,9 @@ export function Why() {
                       : "bg-accent/40 border-accent/50 hover:border-foreground/30"
               }`}
             >
-              <h3 className="font-display text-2xl lg:text-3xl font-medium tracking-tight">{d.t}</h3>
+              <h3 className="font-display text-2xl lg:text-3xl font-medium tracking-tight">
+                {d.t}
+              </h3>
               <p
                 className={`mt-4 leading-relaxed ${d.n === "02" ? "text-background/65" : "text-foreground/70"}`}
               >

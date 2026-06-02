@@ -3,11 +3,11 @@ import { SERVICE_DETAIL } from "./data";
 
 export function ServicesDetail() {
   return (
-    <section id="services" className="py-6 lg:py-10 px-4 md:px-8">
+    <section id="services" className="py-6 lg:py-10 px-4 md:px-8 ">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6">
           <Chip className="mb-6">What we build</Chip>
-          <h2 className="font-display font-medium text-3xl md:text-5xl lg:text-6xl leading-[0.95] tracking-tighter whitespace-nowrap">
+          <h2 className="font-display font-medium text-3xl md:text-5xl lg:text-6xl leading-[0.95] tracking-tighter">
             From strategy to execution, under one team.
           </h2>
         </div>
@@ -22,19 +22,15 @@ export function ServicesDetail() {
                 />
                 <div className="col-span-12 md:col-span-5">
                   <h3 className="font-display text-2xl md:text-4xl font-medium leading-[0.95] tracking-tight">
-                    <span
-                      className="inline-flex items-center rounded-full px-6 py-2.5 font-semibold tracking-tight text-accent-foreground border border-accent/60 shadow-[0_4px_20px_-6px_hsl(140_40%_55%/0.35),inset_0_1px_0_hsl(0_0%_100%/0.7)] backdrop-blur-sm transition-all duration-300 group-hover:shadow-[0_8px_28px_-6px_hsl(140_45%_55%/0.5),inset_0_1px_0_hsl(0_0%_100%/0.8)] group-hover:-translate-y-0.5"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(135deg, hsl(120 45% 88% / 0.95), hsl(140 40% 78% / 0.95))",
-                      }}
-                    >
+                    <span className="inline-flex items-center px-6 py-2.5 font-semibold tracking-tight text-accent-foreground group-hover:-translate-y-0.5">
                       {s.t}
                     </span>
                   </h3>
                 </div>
                 <div className="col-span-12 md:col-span-4">
-                  <p className="text-sm md:text-base text-foreground leading-relaxed font-bold">{s.d}</p>
+                  <p className="text-sm md:text-base text-foreground leading-relaxed font-bold">
+                    {s.d}
+                  </p>
                 </div>
                 <div className="col-span-12 md:col-span-3">
                   <ul className="flex flex-wrap gap-1.5">

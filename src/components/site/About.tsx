@@ -68,8 +68,8 @@ export function About() {
               "I started Woharon because too many businesses lose customers simply because their
               digital presence doesn't reflect the quality of what they actually do, and they
               overspend on tools and vendors trying to fix it. We exist to{" "}
-              <span className="italic font-black text-emerald-700">close that gap</span>, saving
-              you time, cutting cost, and creating real value with systems that genuinely work."
+              <span className="italic font-black text-accent">close that gap</span>, saving you
+              time, cutting cost, and creating real value with systems that genuinely work."
             </>
           }
         />
@@ -81,13 +81,13 @@ export function About() {
           heading="Co-Founder's note"
           quote={
             <>
-              "A great business can easily be dragged down by a slow website, inconsistent
-              branding, or repetitive manual tasks. At Woharon, my focus is to fix that. Whether
-              we are coding a custom app, automating your workflows, or driving your social media
-              content, the goal remains the same. We, the team members, do not just sell our
-              design or engineering skills. We sell{" "}
-              <span className="italic font-black text-emerald-700">end-to-end execution</span>{" "}
-              that elevates your brand and drives its value."
+              "A great business can easily be dragged down by a slow website, inconsistent branding,
+              or repetitive manual tasks. At Woharon, my focus is to fix that. Whether we are coding
+              a custom app, automating your workflows, or driving your social media content, the
+              goal remains the same. We, the team members, do not just sell our design or
+              engineering skills. We sell{" "}
+              <span className="italic font-black text-accent">end-to-end execution</span> that
+              elevates your brand and drives its value."
             </>
           }
         />
