@@ -18,13 +18,13 @@ function FounderNote({ image, alt, name, role, heading, quote }: FounderNoteProp
         <img
           src={image}
           alt={alt}
-          className="w-full h-full object-cover rounded-[1.2rem]"
+          className="w-full h-full object-cover object-top rounded-[1.2rem]"
           loading="lazy"
         />
         {/* Floating Tag */}
         <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-background/95 backdrop-blur-md text-foreground px-4 py-2 rounded-xl border border-border">
           <div>
-            <div className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground">
+            <div className="text-[12px] font-bold uppercase tracking-widest text-muted-foreground">
               {role}
             </div>
             <div className="font-display text-base leading-tight">{name}</div>
