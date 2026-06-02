@@ -1,4 +1,4 @@
-import woharonMark from "@/assets/woharon-mark.png";
+import woharonLogo from "@/assets/woharon-logo.svg";
 import { NAV, WHATSAPP } from "./data";
 
 export function Footer() {
@@ -8,8 +8,7 @@ export function Footer() {
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-2 font-display font-bold text-2xl">
-              <img src={woharonMark} alt="Woharon" className="h-6 w-6 object-contain" />
-              Woharon
+              <img src={woharonLogo} alt="Woharon" className="h-6 w-auto object-contain" />
             </div>
             <p className="mt-4 font-display text-2xl lg:text-4xl leading-tight max-w-md font-medium tracking-tight">
               Building the <span className="italic font-light text-primary">digital future</span> of
