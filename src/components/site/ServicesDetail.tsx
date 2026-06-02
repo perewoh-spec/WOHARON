@@ -22,7 +22,7 @@ export function ServicesDetail() {
                 />
                 <div className="col-span-12 md:col-span-5">
                   <h3 className="font-display text-2xl md:text-4xl font-medium leading-[0.95] tracking-tight">
-                    {s.t}
+                    <span className="inline-block bg-accent text-accent-foreground rounded-full px-5 pb-2 pt-1">{s.t}</span>
                   </h3>
                 </div>
                 <div className="col-span-12 md:col-span-4">
