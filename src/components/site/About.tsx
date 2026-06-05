@@ -24,14 +24,10 @@ function FounderNote({ image, alt, name, role, heading, quote }: FounderNoteProp
         {/* Floating Tag */}
         <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-background/95 backdrop-blur-md text-foreground px-4 py-2 rounded-xl border border-border">
           <div>
-            <div className="text-[12px] font-bold uppercase tracking-widest text-muted-foreground">
-              {role}
-            </div>
+            
             <div className="font-display text-base leading-tight">{name}</div>
           </div>
-          <span className="bg-primary text-primary-foreground text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest">
-            Est. 2026
-          </span>
+        
         </div>
       </div>
 
@@ -46,14 +42,6 @@ function FounderNote({ image, alt, name, role, heading, quote }: FounderNoteProp
           </p>
         </div>
 
-        {/* Divider and Signature */}
-        <div className="mt-4 flex items-center gap-4">
-          <div className="h-px flex-1 bg-border" />
-          <div className="text-right">
-            <div className="font-display text-base">{name}</div>
-            <div className="text-[11px] text-muted-foreground">{role}</div>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { TEAM } from "./data";
 
 export function Team() {
   return (
-    <section id="team" className="py-6 lg:py-8 px-4 md:px-8">
+    <section id="team" className="">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6">
           <h2 className="font-display text-4xl lg:text-6xl font-medium tracking-tighter text-balance">
@@ -12,11 +12,9 @@ export function Team() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {TEAM.map((m) => (
-            <Reveal
-              key={m.name}
-              className="group bg-card border border-border rounded-[1.75rem] p-3 overflow-hidden"
-            >
-              <div className="relative rounded-[1.25rem] overflow-hidden aspect-square bg-muted">
+            <div key={m.name} className="group bg-card border border-border rounded-[1.75rem] p-3 overflow-hidden flex items-center gap-4">
+              {/* Replaced full-width aspect-square with a fixed size (w-24 h-24) and shrink-0 */}
+              <div className="relative rounded-[1.25rem] overflow-hidden w-24 h-24 shrink-0 bg-muted border-4 border-black">
                 <img
                   src={m.image}
                   alt={`Portrait of ${m.name}, ${m.role} at Woharon`}
@@ -24,13 +22,14 @@ export function Team() {
                   loading="lazy"
                 />
               </div>
-              <div className="px-1 pt-3 pb-1">
+              {/* Adjusted padding for the text container */}
+              <div className="px-1">
                 <div className="font-display text-xl tracking-tight">{m.name}</div>
                 <div className="text-[14px] font-bold uppercase tracking-widest text-muted-foreground mt-1">
                   {m.role}
                 </div>
               </div>
-            </Reveal>
+            </div>
           ))}
         </div>
       </div>

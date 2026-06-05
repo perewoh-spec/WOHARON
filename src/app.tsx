@@ -18,7 +18,6 @@ export default function App() {
         <Hero />
         <ServicesDetail />
         <Why />
-        <Team />
         <About />
         <CTA />
         <ContactForm />

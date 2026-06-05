@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Sparkles, Layers, Rocket } from "lucide-react";
 import woharonMark from "@/assets/woharon-mark.png";
+import { Team } from "./Team";
 
 const ROTATING_WORDS = ["websites.", "brands.", "automations.", "systems.", "stores."];
 
@@ -121,7 +122,10 @@ export function Hero() {
         </div>
 
         <KineticVisual />
-
+        {/* Wrap Team in a full-width col-span div */}
+        <div className="md:col-span-12">
+          <Team />
+        </div>
         <div className="md:col-span-12 bg-muted border border-border rounded-[2rem] py-6 overflow-hidden">
           <div className="marquee-track whitespace-nowrap flex gap-12 items-center">
             {[...Array(2)].map((_, i) => (
