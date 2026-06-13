@@ -10,9 +10,7 @@ import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { Work } from "@/components/site/Work";
 import { Routes, Route } from "react-router-dom";
-import CourseConnect from "@/pages/CourseConnect";
-import LouidorPristine from "@/pages/LouidorPristine";
-import WorkPlaceholder from "@/pages/WorkPlaceholder";
+import ProjectPage from "@/pages/ProjectPage"; // Import your new dynamic component
 
 function Home() {
   return (
@@ -35,9 +33,8 @@ export default function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/work/courseconnect" element={<CourseConnect />} />
-        <Route path="/work/louidor-pristine" element={<LouidorPristine />} />
-        <Route path="/work/:slug" element={<WorkPlaceholder />} />
+        {/* Replaces all individual hardcoded project routes */}
+        <Route path="/work/:slug" element={<ProjectPage />} /> 
       </Routes>
       <Footer />
       <WhatsAppFloat />

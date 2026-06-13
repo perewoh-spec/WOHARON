@@ -1,40 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { Chip, Reveal } from "./shared";
-import thumb from "@/assets/courseconnect/thumbnail_1.jpg";
-import louidorThumb from "@/assets/louidor/Thumbnail.jpg";
+import { PROJECTS } from "./projectsData"; // Import from your new central file
 
-type Project = {
-  slug: string;
-  title: string;
-  chips: string[];
-  thumb: string;
-  to: string;
-};
 
-const PROJECTS: Project[] = [
-  {
-    slug: "courseconnect",
-    title: "CourseConnect",
-    chips: ["Web App", "System"],
-    thumb: thumb,
-    to: "/work/courseconnect",
-  },
-  {
-    slug: "louidor-pristine",
-    title: "Louidor Pristine",
-    chips: ["Web Dev", "Agency"],
-    thumb: louidorThumb,
-    to: "/work/louidor-pristine",
-  },
-  {
-    slug: "ops-automation",
-    title: "Ops Automation",
-    chips: ["Automation", "Systems"],
-    thumb: "",
-    to: "/work/ops-automation",
-  },
-];
 
 export function Work() {
   return (
@@ -51,7 +20,7 @@ export function Work() {
           {PROJECTS.map((p, idx) => (
             <Reveal key={p.slug} delay={idx * 60}>
               <Link
-                to={p.to}
+                to={`/work/${p.slug}`}
                 className="group block rounded-[2rem] border border-border bg-card overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:border-accent"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-black">

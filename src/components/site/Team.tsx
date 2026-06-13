@@ -13,7 +13,7 @@ export function Team() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {TEAM.map((m) => (
             <div key={m.name} className="group bg-card border border-border rounded-[1.75rem] p-3 overflow-hidden flex items-center gap-4">
-              {/* Replaced full-width aspect-square with a fixed size (w-24 h-24) and shrink-0 */}
+              {/*\ Replaced full-width aspect-square with a fixed size (w-24 h-24) and shrink-0 */}
               <div className="relative rounded-[1.25rem] overflow-hidden w-24 h-24 shrink-0 bg-muted border-4 border-black">
                 <img
                   src={m.image}
