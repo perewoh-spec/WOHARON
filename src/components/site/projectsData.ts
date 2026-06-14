@@ -203,12 +203,4 @@ export const PROJECTS: Project[] = [
       }
     ]
   },
-  {
-    slug: "ops-automation",
-    title: "Ops Automation",
-    chips: ["Automation", "Systems"],
-    thumb: "",
-    about: "",
-    slides: [] // Empty array triggers the placeholder fallback
-  }
 ];
